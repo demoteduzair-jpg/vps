@@ -21,16 +21,16 @@ C_GREEN=$'\033[1;32m'; C_YELLOW=$'\033[1;33m'; C_RED=$'\033[1;31m'
 C_MAGENTA=$'\033[1;35m'; C_WHITE=$'\033[1;37m'
 
 display_header() {
-    clear 2>/dev/null || true
-    echo "${C_CYAN}"
-    cat <<'EOF'
+clear 2>/dev/null || true
+echo "${C_CYAN}"
+cat <<'EOF'
  _   _ _  __ ____  _        _    __   __
 | | | | |/ /|  _ \| |      / \   \ \ / /
 | | | | ' / | |_) | |     / _ \   \ V /
 | |_| | . \ |  __/| |___ / ___ \   | |
  \___/|_|\_\|_|   |_____/_/   \_\  |_|
-
 EOF
+echo "${C_RESET}"
     echo "${C_MAGENTA}          UK PLAYZ  |  MULTI-VM CONTROL PANEL${C_RESET}"
     echo "${C_CYAN}================================================================${C_RESET}"
     printf "${C_WHITE}  Version: %s     Engine: QEMU TCG/KVM-auto     Platform: Linux${C_RESET}\n" "$APP_VERSION"
